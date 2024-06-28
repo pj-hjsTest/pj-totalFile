@@ -1,0 +1,209 @@
+/* 폰트 정보*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+/* 초기화 작업 */
+html {font-size: 0.625rem;}
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+.blind {opacity: 0; width: 0; height: 0;}
+.txt_lb {display: block;}
+button {border: none; background: none; padding: none; color: inherit;}
+
+/* 공통요소 */
+body {background: #000 ; color: #888; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 1.6rem; line-height: 1.6; font-weight: 400; overflow-y: hidden;}
+body .frame {width: calc(100vw - 24px); height: calc(100vh - 24px); background: #fff;box-sizing: border-box; border-radius: 150px 50px 0 50px; position: fixed; top:12px; left: 12px; overflow: hidden; z-index: -1;} 
+.container {height: 100vh; box-sizing: border-box; padding: 120px 0 70px; width: 1200px;  margin: 0 auto; }
+.frame-bt, .frame-bt::after {position: fixed; top:0; left:0 ;background: #000; height: 12px; width: 100%; z-index: 50;}
+.frame-bt::before {content: ''; background: #fff; top: 12px; left: 50%; transform: translateX(-50%); width: 1200px; height: 60px; z-index: -1; position: fixed; }
+.frame-bt::after {content: ''; top: unset; bottom: 0;}
+.wholePage {width: auto; height: 100vh; overflow-y: hidden;}
+.wholePage::after {content: ''; position: fixed; top:0; left: 0; right: 0; background: #000; height: 12px; z-index: 1000;} 
+
+
+/* navigation - nav */
+.gnbArea {position: fixed; top: 12px; width: 1200px; left: 50%; transform: translateX(-50%); overflow: hidden; z-index: 100;}
+.gnbArea ul { position: relative; top:0; height: 60px; display: flex; align-items: center; justify-content: flex-end; padding: 20px 0;box-sizing: border-box; z-index: 50;}
+.gnbArea ul li button {padding: 20px 50px 0; text-align: center; color: #111; font-weight: 400;font-size: 1.4rem;position: relative; background: none; border: none; cursor: pointer;}
+/* navigation - 마우스 호버 이벤트 */
+.gnb li button::after {content: ''; width: 80%; height: 20px; background:#111; position: absolute; top:-100%; left:50%; transform: translateX(-50%); border-radius: 0 0 20px 20px; transition: all 0.3s;}
+.gnb li button.active::after {top:-16px;}
+
+
+/* pagenation */
+.pagenation .controller {width: 140px; height: 100vh; display: flex; flex-direction: column; align-items: center; position: fixed; right: 12px; top:12px;justify-content: center;}
+.pagenation .controller li {width: 5px;aspect-ratio: 1/1; background: #ccc; border-radius: 50%; margin: 10px 0; transition: all 0.2s;}
+
+
+/* Main  - container */
+.mainArea {display: flex; justify-content: space-between; align-items: center; height: 600px; width: 1080px; margin: 0 auto;}
+
+/* main 내 프로필 정보 작성영역 */
+#main_sec {position: relative;}
+#main_sec .infoArea h3 {font-size: 4.6rem; font-weight: 700; line-height: 1.35em; color: #111; }
+.infoArea .overview {margin-top: 60px; font-size:2.4rem; color: #888;}
+.infoArea .overview span {font-weight: 600; color: #555;}
+.infoArea .overview .txt_lb {margin-top: 15px; font-weight: 400; color:#888}
+.desc {text-align: center; margin-top: 70px; font-size: 1.4rem; color:#b3b3b3}
+
+/* mainArea Right 공통*/
+.mainAreaRight > div {width: 420px; margin-bottom: 10px; background: #efefef; padding: 30px 40px 30px; border-radius: 30px;}
+.mainAreaRight h2 {font-size: 2rem; color:#444;  font-weight: 700;}
+.mainAreaRight > div > ul {margin-top:10px; color: #555;}
+.mainAreaRight > div+div > ul li {margin-top: 4px;}
+.mainAreaRight > div:nth-child(2) > ul li::before {content: '';display: inline-block; width: 3px; aspect-ratio: 1/1; border-radius: 50%; background: #444; vertical-align: middle; margin:0 6px 0 10px;}
+/* main - eduArea */
+.eduList span {font-weight: 500; display: inline-block; width: 80px;}
+/* main - tech */
+.techIcon {display: flex; gap: 5px; flex-wrap: wrap;}
+.techIcon li {padding: 5px 16px; background: #777; border-radius: 20px; color: #fff; font-size: 1.4rem;}
+/* scroll */
+.btnScroll,.scrollAbout {position: absolute; bottom: 20px; left:50%; transform: translateX(-50%);}
+.scrollAbout {bottom: 70px; font-size: 1.4rem; color: #999}
+
+
+/* 기술 개요 - techArea */
+#techArea {display: flex; justify-content: space-between; align-items: flex-start;}
+#techArea::after {content: ''; position:fixed; width: 40%; left: -100%; top:0; bottom:0; background: #000; z-index: 60; border-radius: 0 80px 0px 0; transition: all 0.6s;}
+#techArea.active::after {left: 0; bottom:0; opacity: 1;}
+#techArea .titleArea {font-size: 6rem;  color: #fafafa; font-weight: 700; z-index: 100; line-height: normal; width: 30%; text-align: right; word-break: keep-all;}
+#techArea .titleArea .desc{margin-top: 12px; text-align: right; text-transform: uppercase; font-size: 1.7rem; font-weight:400; line-height: 1.6;}
+#techArea .titleArea .introduceTxt {margin-top: 120px; text-align: left;}
+.introduceTxt span {display: block; margin-top: 40px;}
+/* techInfo - 우측영역 */
+.techInfo {margin-top: 16px;}
+.techInfo h3 {color: #444; font-weight: 700; font-size: 2.4rem;}
+.techInfo h3 span {font-size: 1.8rem; padding-left: 6px; }
+.techInfo div+div {margin-top: 56px;}
+.techInfo .stackList {margin-top: 10px; color:#555}
+.techInfo .stackList li {line-height: 1.9;}
+.techInfo .stackList > li::before {content: ''; width: 4px; height: 4px; border-radius: 50%; background: #ccc; display: inline-block; vertical-align: middle; margin-right: 10px;}
+.techInfo .stackList > li.toolWrap::before {display: none;}
+.toolWrap {padding: 10px 20px; box-sizing: border-box; border-radius: 40px; display: flex; width: 80%; margin-top: 10px; background:#efefef;}
+.toolWrap .title {font-size: 1.8rem; color: #555; font-weight:700;}
+.toolWrap .depth2 {display: flex; margin-left: 25px;}
+.toolWrap li {width: 30px; height: 30px; margin-right: 10px; overflow: hidden;}
+.toolWrap li img {max-width: 100%;}
+
+
+/* PROjECT */
+#projectArea {padding-top: 90px;}
+#projectArea h2 {font-size: 5.6rem; color: #111; text-align: center; font-weight: 600; line-height: normal; margin-top: 20px;}
+.pjList.mySwiper {margin-top: 10px; display: flex; flex-direction: column; border: 1px solid #efefef; margin-top: 40px; box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; border-radius: 40px;}
+/* project card */
+.pjCard {display: flex; color: #555; justify-content: space-around;  padding: 60px 0 80px; height: 600px;}
+.pjCard figure {width: 648px; height: 460px; background-color: transparent; box-sizing: border-box; padding: 10px;}
+.pjCard figure .badge {display: inline-block; background: #111; padding: 2px 15px; border-radius: 20px; font-size: 1.3rem; color: #fff; font-weight: 700; margin-right: 5px;}
+
+/* projectCard - pgInfoArea // 웹사이트 개요 */
+.pgInfoArea {width: 450px; height: 500px;margin-right: 50px; box-sizing: border-box; padding: 20px 30px 30px; border-radius: 20px;background: rgba(255, 255, 255,0.95); box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; display: flex; flex-direction: column; justify-content: space-between;}
+.pgInfoArea .pgTitle {font-size: 2.4rem; color: #111; font-weight: 700;}
+.pgInfoArea .pgTitle .desc {font-weight: inherit; color: inherit; margin-left: 6px;}
+.pjCard .useStack {display: flex; margin-top: 6px;}
+.useStack .techBadge {display: inline-block; padding: 2px 15px; color: #111; background: #efefef; border-radius: 20px; margin-right: 6px; font-size: 1.5rem; font-weight: 600;}
+.pgInfoArea .overview {margin-top: 40px; font-size: 1.6rem; line-height: 1.7; color:#111}
+.pgInfoArea .overview > p {margin-top: 6px;}
+.pgInfoArea .overview > p > span {font-weight: 600; display: inline-block; width: 90px;}
+.pgInfoArea .overview .projectAbout {margin-top: 20px;}
+.linkWrap {margin-top: 80px;}
+.linkWrap li {width: 45%; height: 46px; float: left; text-align: center; margin-right: 10px;  font-size: 1.5rem; box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.08),inset 10px 10px 15px rgba(70, 70, 70, 0.1), rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;border-radius: 10px; background-color: #333; color: #fff; position: relative;  transition: all 0.2s;}
+.linkWrap li:nth-child(2) {background-color: #fff; color:#333; font-weight: 600; box-shadow: unset; border: 1px solid #ccc; outline: 1px solid transparent;}
+.linkWrap li a {display: inline-block; padding: 10px 10px;}
+.linkWrap li .git::after{content: ''; display: inline-block; width: 21px; height: 21px; background: url(../src/asset/github-mark.png) no-repeat center/cover; margin-left: 10px; vertical-align: -4px;}
+.linkWrap li:first-child:hover {background: #111;}
+.linkWrap li:nth-child(2):hover {outline: 3px solid #efefef;}
+/* project area -swiper 커스텀 */
+#projectArea .swiper-button-prev::after,#projectArea .swiper-button-next::after  {display: none;}
+#projectArea .swiper-button-prev, #projectArea .swiper-button-next{width: 40px; height: 40px; background: rgba(255,255,255) url(../src/asset/btn_left_2.png) no-repeat center/26px; border-radius: 50%; } 
+#projectArea .swiper-button-next {background-image: url(../src/asset/btn_right_2.png);}
+
+/* contactArea */
+#contactArea {display: flex; justify-content: center; flex-direction: column;}
+#contactArea .mailWrap {position: relative;}
+
+#contactArea .contact{text-align: center;}
+#contactArea .contact a {display: inline-block; padding: 5px 10px; position: relative;font-family: 'Young Serif'; font-size: 5.6rem; color: #111;font-weight: 400; line-height: normal;}
+#contactArea .contact a::after {content: ''; position: absolute; bottom:10px; left: 0; width: 0; background: #60f8eb; height: 25%; z-index: -1; transition: all 0.3s;}
+#contactArea .contact:hover a::after {width: 100%;}
+#contactArea .desc {font-size: 2rem; color: #444; margin-top: 36px; padding: 0 0 100px 0;}
+.sendIcon {position: absolute; right: 23%; top:-10px; font-size: 1.8rem; opacity: 0; transition: all 0.4s; background: url(../src/asset/btn_right.png) no-repeat right/20px; padding-right: 24px; vertical-align: middle; color: #444;}
+.contact:hover .sendIcon {right: 22%; opacity: 1; font-weight: 600;}
+
+
+/* 반응형 */
+@media screen and (max-width:768px){
+    /* 공통요소 */
+    body  {overflow-y: unset}
+    body .frame {width: calc(100vw - 12px); height: calc(100vh - 12px);;border-radius: 10px 10px 50px 50px; top: 6px; left: 6px;}
+    .frame-bt, .frame-bt::after {height: 6px; width: 100%;}
+    .container  {width: 100%; padding: 60px 20px; height: unset; }
+    .frame-bt::before {display: none;}
+    .frame-bt::after,.wholePage::after {height: 6px;}
+    .wholePage {width: auto; height: unset; overflow-y: unset;}
+
+    /* nav */
+    .gnbArea {top:6px; width: 90%; position: fixed; z-index: 300; }
+    .gnbArea ul {height: 40px; padding: 10px 0;}
+    .gnb li button::after {height: 15px;}
+    .gnb li button.active::after {top: -6px;}
+    .gnbArea ul li button {padding: 16px 10px 10px;}
+    .gnbArea ul li {background:rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px)}
+    .gnbArea ul li:first-child {border-radius: 10px 0 0 10px;}
+    .gnbArea ul li:last-child {border-radius: 0 10px 10px 0;}
+
+    /* pagenation */
+    .pagenation {display: none;}
+
+    /* main 내 프로필 정보 작성영역 */
+    .mainArea {width: 100%; flex-direction: column; height: unset; justify-content: flex-start; align-items: center; gap: 60px}
+    #main_sec .infoArea {text-align: center; margin-top: 80px;}
+    #main_sec .infoArea h3 {font-size: 3.4rem}
+    .infoArea .overview {margin-top: 40px; font-size: 2rem;}
+
+    .mainAreaRight > div {width: 100%; padding: 10px 20px; border-radius: 20px; box-sizing: border-box;}
+    .mainAreaRight h2 {font-size: 1.7rem;}
+    .mainAreaRight > div > ul {margin-top:6px; color: #555; font-size: 1.6rem;}
+    .mainAreaRight > div:nth-child(2) > ul li::before {width: 2px; margin: 0 6px 0 5px;}
+    .techIcon li {padding: 5px 15px; font-size: 1.5rem;}
+    .desc {margin-top: 60px; font: 1.3rem;}
+
+    /* scroll */
+    .btnScroll {opacity: 0.2;}
+    .scrollAbout {display: none;}
+
+    /* 기술 개요 - techArea */
+    #techArea {flex-direction: column; align-items: center; position: relative; margin-top: 60px; gap: 100px}
+    #techArea::after {width:calc(100vw - 12px); height: 36% ;position: absolute; top:0; left:6px; background: #efefef; border-radius: unset;}
+    #techArea.active::after {left:unset}
+    #techArea .titleArea {font-size: 3.4rem; color: #111; width: 70%; text-align: left;}
+    #techArea .titleArea .desc {font-size: 1.6rem; text-align: left;}
+    #techArea .titleArea .introduceTxt {color: #333; margin-top: 40px;}
+    .introduceTxt span { margin-top: 20px;}
+    .techInfo h3 {font-size: 2.8rem;}
+
+    /* PROjECT */
+    #projectArea {padding-top: 60px;}
+    #projectArea h2 {font-size: 4.8rem;}
+    .pjCard  {height: 560px; flex-direction: column; position: relative;}
+    .pjCard figure {position: absolute; top:10px; left: 20px;}
+    .pjCard figure .badge {font-size: 1.3rem}
+    .pgInfoArea {position: absolute; bottom: 0; width: 100%; height: 70%; margin: unset; padding: 30px 40px; background: #fff; border-radius:20px 20px 0 0 ;}
+    .pgInfoArea .pgTitle {font-size: 2.2rem;}
+    .pjCard .useStack {align-items: center;}
+    .useStack .techBadge {font-size: 1.3rem;}
+    .pgInfoArea .overview {margin-top: 20px;}
+    .linkWrap {display: flex; justify-content: center; margin-top: 30px;}
+
+    /* project area -swiper 커스텀 */
+    #projectArea .swiper-button-prev, #projectArea .swiper-button-next {position: absolute; top:30%}
+
+    /* contactArea */
+    #contactArea {margin-top: 60px; height: calc(100vh - 60px); width: 100%;}
+    #contactArea .contact a {font-size: 2.8rem;}
+    .sendIcon  {right: 0;}
+    .contact:hover .sendIcon {right: 6%}
+    #contactArea .desc {font-size: 1.8rem;}
+
+}

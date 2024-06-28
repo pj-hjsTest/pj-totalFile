@@ -1,0 +1,73 @@
+{
+    "projects" : [
+        {
+            "id":1,
+            "pgTit":"포트폴리오",
+            "pgDesc":"(현재페이지)",
+            "badges":["반응형"],
+            "skills":["REACT", "CSS3","Framer-motion","JS"],
+            "기여도":"디자인, 퍼블리싱 100%", 
+            "작업기간":"4주",
+            "제작페이지":"메인페이지, 반응형페이지",
+            "개요":"리액트 컴포넌트를 사용해 퍼블리싱된 포트폴리오 사이트입니다.",
+            "link":[{"web":"https://pj-hjstest.github.io/pj-pf/"},{"git":"https://github.com/pj-hjsTest/pj-pf.git"}],
+            "bgUrl":"/project01.png"
+        },
+        {
+            "id":2,
+            "pgTit":"오설록",
+            "pgDesc":"(클론코딩)",
+            "badges":["클론코딩", "모바일 페이지"],
+            "skills":["HTML5", "CSS3", "JS", "jQUERY"],
+            "기여도":"퍼블리싱 100%",
+            "작업기간":"4주",
+            "제작페이지":"메인페이지, 다다일상, 브랜드",
+            "개요":"오설록 사이트 클론코딩 진행했습니다. 가로사이즈가 약 780일 때, pc 혹은 모바일 페이지로 이동합니다 ",
+            "link":[{"web":"https://pj-hjstest.github.io/pj-da/"},{"git":"https://github.com/pj-hjsTest/pj-da.git"}],
+            "bgUrl":"/project02.png"
+            
+        },
+        {
+            "id":3,
+            "pgTit":"서울국제여성영화제 2023",
+            "pgDesc":"(클론코딩)",
+            "badges":["반응형","클론코딩"],
+            "skills":["HTML5", "CSS3", "JS", "jQUERY"],
+            "기여도":"퍼블리싱 100%",
+            "작업기간":"2주",
+            "제작페이지":"메인페이지",
+            "개요":"서울국제여성영화제 사이트를 클론코딩 진행했습니다."
+            ,
+            "link":[{"web":"https://pj-hjstest.github.io/pj-movie/"},{"git":"https://github.com/pj-hjsTest/pj-movie.git"}],
+            "bgUrl":"/project03.png"
+        },
+        {
+            "id":4,
+            "pgTit":"서울국제여성영화제 2024",
+            "pgDesc":"(클론코딩)",
+            "badges":["반응형","클론코딩"],
+            "skills":["HTML5", "CSS3", "JS", "jQUERY"],
+            "기여도":"퍼블리싱 100%",
+            "작업기간":"4주",
+            "제작페이지":"메인페이지, 로그인, 검색, swiff2023-개요",
+            "개요":"리뉴얼된 기존 사이트를 다시 클론코딩 진행하였습니다."
+            ,
+            "link":[{"web":"https://pj-hjstest.github.io/pj-movie/new_main.html"},{"git":"https://github.com/pj-hjsTest/pj-movie.git"}],
+            "bgUrl":"/project04.png"
+        },
+        {
+            "id":5,
+            "pgTit":"Credit",
+            "pgDesc":"교육기관 평가 제출작",
+            "badges":["반응형"],
+            "skills":["REACT", "CSS3", "JS","api"],
+            "기여도":"퍼블리싱, 기획, 디자인 100%",
+            "작업기간":"1주",
+            "제작페이지":"메인페이지, 로그인, 검색, swiff2023-개요",
+            "개요":"교육기관 평가 제출작으로, 영화관련 api를 사용하여 정보 열람이 가능한 사이트를 기획, 디자인, 퍼블리싱했습니다."
+            ,
+            "link":[{"web":"https://total-test02.netlify.app/"},{"git":"https://github.com/mossuzji/total_test.git"}],
+            "bgUrl":"/project05.png"
+        }
+    ]
+}
